@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Fitness | Transform Your Body</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+    
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #d76902 0%, #c12c51 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .quote-container {
+            transition: all 0.3s ease;
+        }
+        
+        .quote-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .equipment-img {
+            transition: transform 0.5s ease;
+        }
+        
+        .equipment-img:hover {
+            transform: scale(1.05);
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 125, 0, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(255, 125, 0, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 125, 0, 0);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-black text-white py-4 px-6 flex justify-between items-center sticky top-0 z-50">
+        <div class="flex items-center">
+            <img src="Black Retro Fitness Club Circle Logo.png" alt="Elite Fitness logo - A minimalist dumbbell design with gradient orange accent" class="mr-2" width="50">
+            <span class="text-2xl font-bold gradient-text">ELITE FITNESS</span>
+        </div>
+        <div class="hidden md:flex space-x-8">
+            <a href="#home" class="hover:text-orange-400 transition">Home</a>
+            <a href="#classes" class="hover:text-orange-400 transition">Classes</a>
+            <a href="#trainers" class="hover:text-orange-400 transition">Trainers</a>
+            <a href="#testimonials" class="hover:text-orange-400 transition">Testimonials</a>
+            <a href="#contact" class="hover:text-orange-400 transition">Contact</a>
+        </div>
+        <button class="md:hidden text-2xl">☰</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center">
+        <img src="Page one.png" alt="Modern gym interior with weight lifting equipment and crossfit zone in background" class="absolute w-full h-full object-cover brightness-50" width="1920x1080">
+        
+        <div class="container mx-auto px-6 relative z-10 text-white">
+            <div class="max-w-2xl">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                    <span class="gradient-text">TRANSFORM</span> YOUR BODY
+                </h1>
+                <p class="text-xl mb-8 italic">
+                    "Strength doesn't come from what you can do. It comes from overcoming the things you once thought you couldn't."<br>
+                    <span class="text-orange-300">- Elite Fitness Mantra</span>
+                </p>
+                <button class="bg-gradient-to-r from-orange-500 to-pink-600 text-white px-8 py-4 rounded-full font-bold hover:shadow-lg transition-all duration-300">
+                    START YOUR JOURNEY
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Motivation Quote Bar -->
+    <div class="bg-black text-white py-8 text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4 gradient-text">DAILY MOTIVATION</h2>
+            <p class="text-xl italic" id="daily-quote">
+                "The only bad workout is the one that didn't happen."
+            </p>
+        </div>
+    </div>
+
+    <!-- Classes Section -->
+    <section id="classes" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 gradient-text">OUR CLASSES</h2>
+            
+            <div class="grid md:grid-cols-3 gap-10">
+                <!-- Card 1 -->
+                <div class="quote-container bg-gray-100 rounded-xl p-8 shadow-md">
+                    <img src="page 4.png" alt="Personal training session with instructor demonstrating proper form" class="w-full h-48 object-cover rounded-lg mb-6" width="600x400">
+                    <h3 class="text-2xl font-bold mb-4">PERSONAL TRAINING</h3>
+                    <p class="mb-4">1-on-1 coaching tailored to your unique fitness goals with our certified trainers.</p>
+                    <p class="italic text-orange-500">"A trainer doesn't just guide your exercises, they unlock your hidden potential."</p>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="quote-container bg-gray-100 rounded-xl p-8 shadow-md">
+                    <img src="Page 3.png" alt="Group of people doing high intensity interval training in modern studio" class="w-full h-48 object-cover rounded-lg mb-6" width="600x400">
+                    <h3 class="text-2xl font-bold mb-4">CROSSFIT</h3>
+                    <p class="mb-4">High-intensity functional movement performed constantly at high intensity.</p>
+                    <p class="italic text-orange-500">"Pain is temporary. Quitting lasts forever."</p>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="quote-container bg-gray-100 rounded-xl p-8 shadow-md">
+                    <img src="Page 5.png" alt="Yoga class in spacious studio with wooden floors and large windows" class="w-full h-48 object-cover rounded-lg mb-6" width="600x400">
+                    <h3 class="text-2xl font-bold mb-4">YOGA & RECOVERY</h3>
+                    <p class="mb-4">Improve flexibility, balance, and restore your body and mind.</p>
+                    <p class="italic text-orange-500">"Strength isn't about how much you can lift, but how much you can recover."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipment Section with Quotes -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 gradient-text">TOP-CLASS EQUIPMENT</h2>
+            
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <img src="Page 2.png" alt="Modern weightlifting area with racks of dumbbells and functional training equipment" class="equipment-img w-full rounded-xl shadow-xl" width="800x600">
+                </div>
+                <div>
+                    <h3 class="text-3xl font-bold mb-6">TRAIN WITH THE BEST</h3>
+                    <p class="text-lg mb-6">Our facility boasts state-of-the-art equipment from leading manufacturers to give you the ultimate training experience.</p>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-md mb-6">
+                        <p class="italic mb-4">"Your workout is only as good as your weakest equipment. We eliminate that concern."</p>
+                        <div class="flex items-center">
+                            <img src="page7.png" alt="Portrait of gym equipment manager smiling" class="rounded-full mr-4" width="60x60">
+                            <div>
+                                <p class="font-bold">Manvi Garg</p>
+                                <p class="text-sm text-gray-500">Founder</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trainers Section -->
+    <section id="trainers" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 gradient-text">MEET YOUR TRAINERS</h2>
+            
+            <div class="grid md:grid-cols-3 gap-10">
+                <!-- Trainer 1 -->
+                <div class="quote-container bg-gray-100 rounded-xl overflow-hidden shadow-lg text-center pb-6">
+                    <img src="man.png" alt="Female personal trainer demonstrating proper squat form with olympic barbell" class="w-full h-96 object-cover mb-6" width="600x800">
+                    <h3 class="text-2xl font-bold mb-2">Manvi Garg</h3>
+                    <p class="text-orange-500 mb-4">Strength & Conditioning</p>
+                    <p class="px-6 mb-6">Experience helping athletes and fitness enthusiasts reach peak performance.</p>
+                    <p class="italic px-6 text-gray-700">"Weakness is an excuse. Build your body to prove yourself wrong."</p>
+                </div>
+                
+                <!-- Trainer 2 -->
+                <div class="quote-container bg-gray-100 rounded-xl overflow-hidden shadow-lg text-center pb-6">
+                    <img src="sam.png" alt="Male trainer holding kettlebell while coaching a client" class="w-full h-96 object-cover mb-6" width="600x800">
+                    <h3 class="text-2xl font-bold mb-2">Samarth Garg</h3>
+                    <p class="text-orange-500 mb-4">Functional Training</p>
+                    <p class="px-6 mb-6">Specializes in movement patterns that translate to real-life activities and sports.</p>
+                    <p class="italic px-6 text-gray-700">"Train movements, not just muscles. Your body works as a unit."</p>
+                </div>
+                
+                <!-- Trainer 3 -->
+                <div class="quote-container bg-gray-100 rounded-xl overflow-hidden shadow-lg text-center pb-6">
+                    <img src="vib.png" alt="Senior yoga instructor demonstrating advanced pose on mat" class="w-full h-96 object-cover mb-6" width="600x800">
+                    <h3 class="text-2xl font-bold mb-2">Vibhu Garg</h3>
+                    <p class="text-orange-500 mb-4">Mind-Body Connection</p>
+                    <p class="px-6 mb-6">Helps clients find balance between physical exertion and mental clarity.</p>
+                    <p class="italic px-6 text-gray-700">"Flexibility is gained first in the mind, then reflected in the body."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 gradient-text">MEMBERS STORIES</h2>
+            
+            <div class="grid md:grid-cols-2 gap-10 mb-16">
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <img src="p1.png" alt="Before and after photo collage showing member's transformation" class="rounded-full mr-6" width="80x80">
+                        <div>
+                            <h3 class="text-xl font-bold">DAVID'S TRANSFORMATION</h3>
+                            <p class="text-orange-500">Lost 42 lbs in 6 months</p>
+                        </div>
+                    </div>
+                    <p class="italic mb-4">"Walking into the gym was the hardest first step. But the trainers at Elite became my support system. Their motto 'Show up and the results will come' was right - consistency beats motivation every time."</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <img src="p2.png" alt="Senior member smiling after completing workout session" class="rounded-full mr-6" width="80x80">
+                        <div>
+                            <h3 class="text-xl font-bold">RADHIKA'S JOURNEY</h3>
+                            <p class="text-orange-500">Gained mobility at 68</p>
+                        </div>
+                    </div>
+                    <p class="italic mb-4">"At my age, I thought exercise was just about slowing decline. My trainer taught me 'Age is just a number; decay is a choice.' Now I'm stronger than I was in my 50s."</p>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <h3 class="text-3xl font-bold mb-6 gradient-text">OUR MEMBERS SAY IT BEST</h3>
+                <div class="bg-black text-white p-8 rounded-xl max-w-3xl mx-auto">
+                    <p class="text-2xl italic mb-6" id="rotating-quote">"This isn't just a gym - it's a community pushing each other to be better every day."</p>
+                    <p class="text-orange-400">— James R., Member Since 2019</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-gradient-to-r from-black to-gray-900 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-6">READY TO CHANGE YOUR LIFE?</h2>
+            <p class="text-xl mb-10 max-w-2xl mx-auto">"Your future self will either thank you for starting today, or wonder why you waited so long."</p>
+            <button class="bg-gradient-to-r from-orange-500 to-pink-600 text-white px-10 py-5 rounded-full font-bold text-xl hover:shadow-xl transition-all duration-300 pulse-animation">
+                JOIN ELITE FITNESS TODAY
+            </button>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 gradient-text">GET IN TOUCH</h2>
+            
+            <div class="grid md:grid-cols-2 gap-10">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">OUR LOCATION</h3>
+                    <img src="map.png" alt="Exterior view of Elite Fitness gym facility with modern architectural design" class="w-full rounded-xl shadow-lg mb-6" width="800x500">
+                    <p class="text-lg mb-4">123 Fitness Avenue<br>AABBCC, FS 000000</p>
+                    <p class="text-lg mb-2">"The road to transformation begins with a single step through our doors."</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">SEND US A MESSAGE</h3>
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block mb-2 font-medium">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block mb-2 font-medium">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        </div>
+                        <div>
+                            <label for="message" class="block mb-2 font-medium">Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"></textarea>
+                        </div>
+                        <button type="submit" class="bg-gradient-to-r from-orange-500 to-pink-600 text-white px-8 py-4 rounded-full font-bold hover:shadow-lg transition-all duration-300 w-full">
+                            SEND MESSAGE
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-10">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <img src="Black Retro Fitness Club Circle Logo.png" alt="Miniature version of Elite Fitness logo" class="mr-3" width="50x50">
+                        <span class="text-xl font-bold gradient-text">ELITE FITNESS</span>
+                    </div>
+                    <p class="mb-6">"Building stronger bodies and minds since 2015."</p>
+                    <div class="flex space-x-4">
+                        <a href="#"><img src="whatsapp.png" alt="Facebook social media icon" class="hover:opacity-75 transition" width="40x40"></a>
+                        <a href="#"><img src="facebook.png" alt="Instagram social media icon" class="hover:opacity-75 transition" width="40x40"></a>
+                        <a href="#"><img src="insta.png" alt="Twitter social media icon" class="hover:opacity-75 transition" width="40x40"></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-orange-500">QUICK LINKS</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="hover:text-orange-400 transition">Home</a></li>
+                        <li><a href="#classes" class="hover:text-orange-400 transition">Classes</a></li>
+                        <li><a href="#trainers" class="hover:text-orange-400 transition">Trainers</a></li>
+                        <li><a href="#testimonials" class="hover:text-orange-400 transition">Testimonials</a></li>
+                        <li><a href="#contact" class="hover:text-orange-400 transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-orange-500">HOURS</h3>
+                    <ul class="space-y-3">
+                        <li>Monday - Friday: 5AM - 11PM</li>
+                        <li>Saturday: 7AM - 9PM</li>
+                        <li>Sunday: 8AM - 6PM</li>
+                        <li class="italic mt-4">"There's no off-season for personal growth."</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-orange-500">CONTACT US</h3>
+                    <ul class="space-y-3">
+                        <li>Phone: XXXXXXXX23</li>
+                        <li>Email: info@elitefitness.com</li>
+                        <li class="mt-4 italic">"Your goals are our priority."</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-6 text-center text-gray-500">
+                <p>© 2025 Elite Fitness. All rights reserved.</p>
+                <p class="mt-2 italic">"The pain you feel today will be the strength you feel tomorrow."</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Rotating quotes functionality
+        const dailyQuotes = [
+            "Discipline is choosing between what you want now and what you want most.",
+            "The body achieves what the mind believes.",
+            "Success starts with self-discipline.",
+            "It's not about having time, it's about making time.",
+            "Every rep counts.",
+            "Train like an athlete, look like an athlete.",
+            "Your health is an investment, not an expense."
+        ];
+        
+        const testimonialQuotes = [
+            {quote: "This isn't just a gym - it's a community pushing each other to be better every day.", author: "James R., Member Since 2019"},
+            {quote: "From my first day, I felt welcomed and challenged in equal measure.", author: "Sophia T., Member Since 2021"},
+            {quote: "The trainers see potential you don't see in yourself.", author: "Marcus L., Member Since 2020"},
+            {quote: "I've been to many gyms, but none that cared this much about my progress.", author: "Elena K., Member Since 2022"}
+        ];
+        
+        // Set initial daily quote
+        document.getElementById('daily-quote').textContent = `"${dailyQuotes[Math.floor(Math.random() * dailyQuotes.length)]}"`;
+        
+        // Rotate testimonial quotes every 5 seconds
+        let currentQuoteIndex = 0;
+        function rotateQuote() {
+            currentQuoteIndex = (currentQuoteIndex + 1) % testimonialQuotes.length;
+            const quoteElement = document.getElementById('rotating-quote');
+            const currentQuote = testimonialQuotes[currentQuoteIndex];
+            
+            quoteElement.style.opacity = 0;
+            
+            setTimeout(() => {
+                quoteElement.textContent = `"${currentQuote.quote}"`;
+                document.querySelector('#rotating-quote + p').textContent = `— ${currentQuote.author}`;
+                quoteElement.style.opacity = 1;
+            }, 500);
+        }
+        
+        setInterval(rotateQuote, 5000);
+        
+        // Mobile menu toggle functionality
+        const mobileMenuButton = document.querySelector('nav button');
+        const mobileMenu = document.querySelector('nav div.hidden');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+            mobileMenu.classList.toggle('flex-col');
+            mobileMenu.classList.toggle('items-center');
+            mobileMenu.classList.toggle('absolute');
+            mobileMenu.classList.toggle('top-16');
+            mobileMenu.classList.toggle('right-6');
+            mobileMenu.classList.toggle('bg-black');
+            mobileMenu.classList.toggle('p-4');
+            mobileMenu.classList.toggle('rounded-lg');
+            mobileMenu.classList.toggle('space-y-4');
+        });
+    </script>
+</body>
+</html>
+
